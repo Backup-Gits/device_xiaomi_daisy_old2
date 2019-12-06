@@ -282,3 +282,7 @@ on boot
 # Graphic node permissions
     chown system graphics /sys/class/graphics/fb0/idle_state
     chmod 0664 /sys/class/graphics/fb0/idle_state
+
+# DT2W Node
+    chown system system /proc/touchpanel/wakeup_gesture
+    chmod 0660 /proc/touchpanel/wakeup_gesture
