@@ -241,3 +241,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # OTA Assert
 TARGET_OTA_ASSERT_DEVICE := daisy
+
+# Twrp
+-include $(DEVICE_PATH)/twrp/twrp.mk
