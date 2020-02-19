@@ -770,5 +770,8 @@
 
 	<!-- Disable rounded corners on windows to improve graphics performance -->
 	<bool name="config_supportsRoundedCornersOnWindows">false</bool>
+
+    <!-- Enable pocket mode -->
+    <bool name="config_proxiSensorWakupCheck">true</bool> 
 	
 </resources>
