@@ -225,6 +225,11 @@ PRODUCT_PACKAGES += \
    init.spectrum.rc \
    init.spectrum.sh
 
+# Moto Dolby
+PRODUCT_PACKAGES += \
+    daxService \
+    MotoDolbyV3
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
