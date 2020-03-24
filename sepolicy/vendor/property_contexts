@@ -63,3 +63,6 @@ persist.gpuboost.profile           u:object_r:gpuboost_prop:s0
 
 # CPUboost
 persist.cpuboost.profile           u:object_r:cpuboost_prop:s0
+
+# Dolby
+persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_prop:s0
