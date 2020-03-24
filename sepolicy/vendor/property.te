@@ -27,3 +27,6 @@ type gpuboost_prop, property_type;
 
 # CPUboost
 type cpuboost_prop, property_type;
+
+# Dolby
+type vendor_dolby_loglevel_prop, property_type;
