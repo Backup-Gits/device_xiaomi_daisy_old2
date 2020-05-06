@@ -127,3 +127,8 @@
 /sys/module/msm_thermal/core_control/enabled		u:object_r:sysfs_corecontrol:s0
 /sys/module/msm_thermal/parameters/enabled		u:object_r:sysfs_msmthermal:s0
 /sys/module/msm_thermal/vdd_restriction/enabled		u:object_r:sysfs_vddrestrict:s0
+
+# Hexagon DSP-side executable needed for Halide operation
+# This is labeled as public_adsprpcd_file as it needs to be read by apps
+# (e.g. Google Camera App)
+/mnt/vendor/dsp/fastrpc_shell_3                                               u:object_r:public_adsprpcd_file:s0
