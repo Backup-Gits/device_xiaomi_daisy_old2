@@ -750,3 +750,9 @@ on property:apexd.status=ready
     chmod 0660 /sys/module/msm_thermal/core_control/enabled
     chown system system /sys/module/msm_thermal/vdd_restriction/enabled
     chmod 0660 /sys/module/msm_thermal/vdd_restriction/enabled
+
+# fastrpc_shell_3
+    mkdir /mnt/vendor/dsp 0770 root root
+    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
+    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
+    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
