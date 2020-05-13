@@ -131,7 +131,7 @@ persist.dirac.poolsize=3
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.hwui.use_buffer_age=false \
-debug.sf.enable_hwc_vds=1 \
+debug.sf.enable_hwc_vds=0 \
 debug.sf.hw=1 \
 ro.opengles.version=196610 \
 vendor.display.disable_partial_split=1 \
