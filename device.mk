@@ -519,3 +519,8 @@ PRODUCT_COPY_FILES += \
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# Wave
+PRODUCT_PACKAGES += \
+    MotoWaves \
+    WavesService
