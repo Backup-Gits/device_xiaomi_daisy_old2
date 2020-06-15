@@ -128,3 +128,5 @@ allow untrusted_app adsprpc_prop:file { getattr };
 allow untrusted_app apexd_prop:file { open };
 allow untrusted_app apexd_prop:file { getattr };
 allow untrusted_app bg_boot_complete_prop:file { open };
+allow untrusted_app camera_prop:file { getattr open read };
+allow untrusted_app persist_camera_prop:file { getattr open read };
