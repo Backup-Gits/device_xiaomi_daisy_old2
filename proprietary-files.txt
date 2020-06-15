@@ -1,4 +1,4 @@
-# ADSP - from Daisy QKQ1.191002.002 V11.0.2.0.QDLMIXM
+# ADSP - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
 vendor/bin/adsprpcd|a5e878691577485c9f7ee33dfe02384a13f0a265
 vendor/lib/libadsprpc.so|e00e8dcb88e9b204fd90bb2c32afcc7fa28dbad1
 vendor/lib/libadsp_default_listener.so|c9a1ee00b32a93a9496ec84393afa0625e929eed
@@ -13,7 +13,7 @@ vendor/lib64/libfastcvopt.so|f5e25aa055a57e23530b858bf7dd204a6009effc
 vendor/lib64/libmdsprpc.so|38de6a53d3c2ff60a253c7c6a0d3b46962e8e194
 vendor/lib64/libsdsprpc.so|1e89a33bae491abe4c81bb77c8fabf59bff4b853
 
-# ADSP Modules - from Daisy QKQ1.191002.002 V11.0.2.0.QDLMIXM
+# ADSP modules - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
 vendor/lib/rfsa/adsp/dirac_resource.dar|d9b3693eab8c520ef859236b8235752188b7cba0
 vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so|035272c1d77bcd04e3a838056d512964744c9322
 vendor/lib/rfsa/adsp/libadsp_hvx_skel.so|6a1d6ee55cc65d0f12f6a9bfd04823b46d2d6a24
@@ -28,11 +28,8 @@ vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|1ff4a48009e88435d93fd2b9b0c5ea59cedbb
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so|f4d8675a46c5e52add8f8e90e35b29cd33ac582b
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so|b9f68e320d24e9c51871a2056e1f47239bd1cb40
 
-# Audio - from Daisy QKQ1.191002.002 V11.0.2.0.QDLMIXM
-etc/permissions/audiosphere.xml|3c6d8f14bd99e52a424282fd5d0a5b9b06485dea
-framework/audiosphere.jar|c1679f5aca56f0cb24745b3f7d219acd04833bed
+# Audio - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
 vendor/bin/audioflacapp|a8ae278497715aa53f6fb86d5f5af225da0fc5b0
-vendor/etc/diracvdd.bin|f9b07ace60490649c44411504909c7bf8bc73d59
 vendor/lib/libacdb-fts.so|9fb9fe8f1e22e38e41f1517b8f206a50bbb24419
 vendor/lib/libacdbloader.so|f33941720463b3c8215fc644b7d638c6d8ab74c7
 vendor/lib/libacdbrtac.so|f997dfef5413873af88bd8636a501401e9ea9631
@@ -47,7 +44,6 @@ vendor/lib/libdrc.so|55fc13d205ce3199de2cf1f9c1dab479909c15be
 vendor/lib/libqtigef.so|fbedb509c61ff1a7d6e9c4a099af346ca781430a
 vendor/lib/libsurround_3mic_proc.so|d8c1d2cb7d598eee79ccfe5b7ec83a185c8fef6c
 vendor/lib/libtinycompress_vendor.so|4991b78d9ed12b828ceeaf61e5cde6328eb944b9
-vendor/lib/soundfx/libasphere.so|4d0ccf1c282bb70619d20bf7d79021dc3815a579
 vendor/lib/soundfx/libaudiopreprocessing.so|948f18c576254144f48e9051be28e7d23f8562cc
 vendor/lib/soundfx/libqcbassboost.so|bc8ae80ff1ade557ff494631494c2f8261028acb
 vendor/lib/soundfx/libqcreverb.so|1b3cef3c4c9145662fddb03c5e1e7dd3a4f25e1e
@@ -64,28 +60,26 @@ vendor/lib64/libaudioparsers.so|67f6836de4391c33cc030faa5c885ab250324291
 vendor/lib64/libqtigef.so|70df5848c061154e4c33b147e06d4979e2391b5e
 vendor/lib64/libtinycompress.so|8d670f7c3079e96b5a36945e95082104876dd64a
 vendor/lib64/libtinycompress_vendor.so|74909f72ee8ebb01c2f4ef717e902055272a5917
-vendor/lib64/soundfx/libasphere.so|f552a053f935299b3fd9be03a596eb4c40dee50e
 vendor/lib64/soundfx/libaudiopreprocessing.so|28e2f7f8ab01a6cc8bc60a278e93704755121f49
 vendor/lib64/soundfx/libqcbassboost.so|0d2afd6f2c5b9aa2397f3e1cb3287bf906cf8fb6
-vendor/lib64/soundfx/libqcreverb.so|fbda7d0189603bb8c0c3e9d92563d75b8ab2dbc8
 vendor/lib64/soundfx/libqcvirt.so|bb046694512d412d6a04bd95ccb2b573454d9717
 
-# Audio Hardware - from Daisy QKQ1.191002.002 V11.0.2.0.QDLMIXM
+# Audio Hardware - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
 vendor/lib/hw/audio.primary.default.so|ff14977e58b75175644acdc1e94215eeb9808f0b
-vendor/lib/hw/audio.primary.msm8953.so|dae9377a0e5dac1af746c684863ece5ceea754ac
+vendor/lib/hw/audio.primary.msm8953.so|681f54d3bc6d5bbd3ec4d802b14920f291460606
 vendor/lib64/hw/audio.primary.default.so|21c56b5ff57681e1068de79520e1e3e542392e89
-vendor/lib64/hw/audio.primary.msm8953.so|6b826bc4e105cd31de69c039bd235c0e7a951259
+vendor/lib64/hw/audio.primary.msm8953.so|93a15cfc441bc13df66a5557add4d2ba803b2b96
 
-# Audio ACDB - from Daisy QKQ1.191002.002 V11.0.2.0.QDLMIXM
-vendor/etc/acdbdata/adsp_avs_config.acdb|ac0616af3b2d4f070c0e54c18126a877e528621b
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|5438a8ae33d7f323173779bb81ee0ac42da879e6
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|ac77c80d2ddc5853f9bcdeb599d4f0c0ad8cdb58
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|279dc326a549df780082151793adde266fedb480
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|ae8ac3dce358dbfeacb90b736793d5ca023aa9db
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|144c397b093137a3af9cc618a6f5434da4a01d08
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|df515758fcd2d5eb6edfad627d2c02642d3b5220
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|ba3d7670485f5e3f5d0f4b5753873875408e0746
-vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|b780c7d8fdd350a3f7aeffaa0bcf311f5fdda0f6
+# Audio ACDB - from Daisy QKQ1.191002.002-V11.0.5.0.QDLMIXM
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
+vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # ANT+ (system) - from enchilada - PKQ1.180716.001/1904032100
 lib64/com.qualcomm.qti.ant@1.0.so|7b03f4a99e2153a6b0a9bce1ca84f7c7577ec4b1
@@ -521,7 +515,7 @@ product/framework/vendor.qti.hardware.factory-V1.1-java.jar|d8fa470013d6a0eb2801
 product/framework/vendor.qti.latency-V2.0-java.jar|d345e24271b83faecdb1abe1361db812fae0646f
 vendor/bin/cnd|df34f1714f65bc909b48882654aefb3e8c27f0f3
 
-# CDSP - from Daisy QKQ1.191002.002 V11.0.2.0.QDLMIXM
+# CDSP - from Daisy QKQ1.191002.002 V11.0.5.0.QDLMIXM
 vendor/bin/cdsprpcd|a1b4c35ffdef184cc1334f3d1cf4fa56546d3621
 vendor/lib/libcdsprpc.so|ad00bd9a9f8e43403fcaf3101cce2b452a636032
 vendor/lib/libcdsp_default_listener.so|5c035d22a100501d090c15786ac720eecec15624
