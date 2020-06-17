@@ -57,3 +57,9 @@ sys.thermal.                                                  u:object_r:thermal
 
 # Dirac
 persist.audio.dirac.                                          u:object_r:dirac_prop:s0
+
+# GPUboost
+persist.gpuboost.profile           u:object_r:gpuboost_prop:s0
+
+# CPUboost
+persist.cpuboost.profile           u:object_r:cpuboost_prop:s0

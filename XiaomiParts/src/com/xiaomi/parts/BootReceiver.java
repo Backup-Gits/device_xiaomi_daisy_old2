@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2018 The Asus-SDM660 Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License
+ */
+
 package com.xiaomi.parts;
 
 import android.content.BroadcastReceiver;
@@ -6,22 +22,24 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 import android.provider.Settings;
+import android.text.TextUtils;
+import com.xiaomi.parts.preferences.LedBlinkPreference;
+import com.xiaomi.parts.preferences.VibratorStrengthPreference;
+import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
+import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
+import com.xiaomi.parts.preferences.YellowFlashPreference;
 
 import com.xiaomi.parts.kcal.Utils;
 import com.xiaomi.parts.ambient.SensorsDozeService;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
-    //public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/" +
-    //        "spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/" +
-    //        "max_brightness";
-    //public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/" +
-    //        "spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/" +
-    //        "max_brightness";
-
     public void onReceive(Context context, Intent intent) {
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        FileUtils.setValue(DeviceSettings.BACKLIGHT_DIMMER_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_BACKLIGHT_DIMMER, 0));
 
         if (Settings.Secure.getInt(context.getContentResolver(), PREF_ENABLED, 0) == 1) {
             FileUtils.setValue(KCAL_ENABLE, Settings.Secure.getInt(context.getContentResolver(),
@@ -47,27 +65,41 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_CONTRAST, CONTRAST_DEFAULT) + CONTRAST_OFFSET);
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
+            LedBlinkPreference.restore(context);
+            VibratorStrengthPreference.restore(context);
+	    VibratorCallStrengthPreference.restore(context);
+	    VibratorNotifStrengthPreference.restore(context);
+            YellowFlashPreference.restore(context);
         }
 
-        //FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH,
-        //        Settings.Secure.getInt(context.getContentResolver(),
-        //                DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
-        //FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH,
-        //        Settings.Secure.getInt(context.getContentResolver(),
-        //                DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
-
+        FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,
+                Settings.Secure.getInt(context.getContentResolver(),
+                        DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
+        FileUtils.setValue(DeviceSettings.TORCH_2_BRIGHTNESS_PATH,
+                Settings.Secure.getInt(context.getContentResolver(),
+                        DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
+        int gain = Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_HEADPHONE_GAIN, 4);
+        FileUtils.setValue(DeviceSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
+        FileUtils.setValue(DeviceSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_MICROPHONE_GAIN, 0));
+        FileUtils.setValue(DeviceSettings.EARPIECE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_EARPIECE_GAIN, 0));
+        FileUtils.setValue(DeviceSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_SPEAKER_GAIN, 0));
         FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));
-
-	//Dirac
+        FileUtils.setValue(DeviceSettings.MSM_TOUCHBOOST_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_MSM_TOUCHBOOST, 0));
+        // Dirac
         context.startService(new Intent(context, DiracService.class));
-	//Ambient
+
+       // Ambient
         context.startService(new Intent(context, SensorsDozeService.class));
 
         boolean enabled = sharedPrefs.getBoolean(DeviceSettings.PREF_KEY_FPS_INFO, false);
         if (enabled) {
             context.startService(new Intent(context, FPSInfoService.class));
         }
-
     }
 }
