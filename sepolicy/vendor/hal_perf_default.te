@@ -1,2 +1,4 @@
 allow hal_perf_default sysfs:dir { open read };
 allow hal_perf_default self:capability { dac_override };
+allow hal_perf_default property_socket:sock_file { write };
+allow hal_perf_default init:unix_stream_socket { connectto };
