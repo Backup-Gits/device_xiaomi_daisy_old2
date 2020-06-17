@@ -187,3 +187,4 @@ allow untrusted_app_27 timedetector_service:service_manager { find };
 allow untrusted_app_27 updatelock_service:service_manager { find };
 allow untrusted_app_27 vold_service:service_manager { find };
 allow untrusted_app_27 wificond_service:service_manager { find };
+allow untrusted_app_27 dalvikcache_data_file:file { execmod };
