@@ -214,8 +214,7 @@ PRODUCT_PACKAGES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiParts \
-    XiaomiDoze
+    XiaomiParts
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -411,6 +410,13 @@ PRODUCT_PACKAGES += \
     move_time_data.sh \
     move_wifi_data.sh \
     ueventd.qcom.rc
+
+# CPU & GPU Boost
+PRODUCT_PACKAGES += \
+    init.gpuboost.rc \
+    init.gpuboost.sh \
+    init.cpuboost.rc \
+    init.cpuboost.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
