@@ -1431,3 +1431,5 @@ vendor/lib64/libdlbdsservice.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@1.0.so
+vendor/lib/soundfx/libatmos.so
+vendor/lib64/soundfx/libatmos.so

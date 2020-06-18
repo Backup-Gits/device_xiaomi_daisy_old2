@@ -33,6 +33,7 @@ persist.vendor.audio.speaker.prot.enable=false \
 ro.audio.soundfx.dirac=true \
 ro.vendor.audio.sdk.fluencetype=fluence \
 ro.vendor.audio.sdk.ssr=false \
+audio.dolby.ds2.enabled=true \
 vendor.audio.dolby.ds2.enabled=true \
 vendor.audio.dolby.ds2.hardbypass=false \
 vendor.audio.flac.sw.decoder.24bit=true \
