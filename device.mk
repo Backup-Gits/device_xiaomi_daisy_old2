@@ -526,3 +526,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     MotoWaves \
     WavesService
+
+# SemcMusic
+PRODUCT_PACKAGES += \
+    SemcMusic
