@@ -530,3 +530,7 @@ PRODUCT_PACKAGES += \
 # SemcMusic
 PRODUCT_PACKAGES += \
     SemcMusic
+
+#OpenCamera
+PRODUCT_PACKAGES += \
+    OpenCamera
