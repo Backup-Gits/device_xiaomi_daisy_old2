@@ -736,3 +736,7 @@ on property:apexd.status=ready
     chown system system /sys/class/leds/vibrator/vmax_mv_user
     chown system system /sys/class/leds/vibrator/vmax_mv_call
     chown system system /sys/class/leds/vibrator/vmax_mv_strong
+
+# High Performance Audio
+    chown system system /sys/module/snd_soc_wcd9330/parameters/high_perf_mode
+    chmod 0660 /sys/module/snd_soc_wcd9330/parameters/high_perf_mode
