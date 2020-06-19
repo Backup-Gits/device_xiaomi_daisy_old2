@@ -99,6 +99,4 @@ allow flags_health_check gsid_prop:file { getattr };
 allow flags_health_check test_boot_reason_prop:file { open };
 allow flags_health_check cpuboost_prop:file { open };
 allow flags_health_check cpuboost_prop:file { getattr };
-allow flags_health_check fst_prop:file { open };
-allow flags_health_check fst_prop:file { getattr };
 allow flags_health_check gpuboost_prop:file { open };

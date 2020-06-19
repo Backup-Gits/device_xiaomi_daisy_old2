@@ -136,4 +136,3 @@ allow untrusted_app mnt_vendor_file:file { getattr };
 allow untrusted_app persist_alarm_file:dir { getattr };
 allow untrusted_app apexd_exec:file { getattr };
 allow untrusted_app adbd_exec:file { getattr };
-allow untrusted_app adbroot_exec:file { getattr };
