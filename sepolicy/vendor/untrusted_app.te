@@ -137,3 +137,5 @@ allow untrusted_app persist_alarm_file:dir { getattr };
 allow untrusted_app apexd_exec:file { getattr };
 allow untrusted_app adbd_exec:file { getattr };
 allow untrusted_app hal_imsrtp:dir { getattr };
+allow untrusted_app vendor_toolbox_exec:file { getattr };
+allow untrusted_app vendor_toolbox_exec:file { read };
