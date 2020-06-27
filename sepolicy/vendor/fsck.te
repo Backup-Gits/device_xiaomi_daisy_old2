@@ -3,3 +3,5 @@ allow fsck self:capability dac_override;
 allow fsck tmpfs:blk_file getattr;
 allow fsck mnt_vendor_file:dir getattr;
 allow fsck mnt_vendor_file:dir { search };
+# allow fsck fsck:capability { dac_override };
+# allow fsck fsck:capability { dac_read_search };
