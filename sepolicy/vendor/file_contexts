@@ -20,6 +20,9 @@
 # Bt_Firmware
 /bt_firmware(/.*)?                            u:object_r:bt_firmware_file:s0
 
+# Mlipay
+/vendor/bin/mlipayd@1\.1             u:object_r:hal_mlipay_default_exec:s0
+
 # Camera
 /data/vendor/qcam(/.*)?                         u:object_r:camera_socket:s0
 
