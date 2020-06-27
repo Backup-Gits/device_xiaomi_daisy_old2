@@ -8,7 +8,6 @@ allow hal_fingerprint_default sysfs:file write;
 allow hal_fingerprint_default system_prop:property_service set;
 allow hal_fingerprint_default sdcardfs:dir search;
 allow hal_fingerprint_default media_rw_data_file:dir { open read };
-allow hal_fingerprint_default sdcardfs:file { getattr open };
 
 allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
 allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
@@ -61,7 +60,6 @@ allow hal_fingerprint_default fpc_data_file:dir rw_dir_perms;
 allow hal_fingerprint_default vndbinder_device:chr_file rw_file_perms;
 allow hal_fingerprint_default media_rw_data_file:dir search;
 allow hal_fingerprint_default rootfs:dir read;
-allow hal_fingerprint_default sdcardfs:file append;
 
 allow hal_fingerprint_default gx_fpd_data_file:dir create_dir_perms;
 allow hal_fingerprint_default system_data_file:dir create_dir_perms;
@@ -85,7 +83,7 @@ allow hal_fingerprint_default fpc_sysfs:dir r_dir_perms;
 allow hal_fingerprint_default media_rw_data_file:dir { open read search };
 allow hal_fingerprint_default rootfs:dir { open read };
 allow hal_fingerprint_default sdcardfs:dir { write search };
-allow hal_fingerprint_default sdcardfs:file { getattr open append };
+allow hal_fingerprint_default sdcardfs:file { getattr open append read };
 allow hal_fingerprint_default sysfs_battery_supply:dir search;	
 allow hal_fingerprint_default sysfs_battery_supply:file { open read };
 allow hal_fingerprint_default sysfs_leds:dir search;	
