@@ -17,17 +17,17 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product-if-exists, vendor/xiaomi/ExclusivePack/config.mk)
+#$(call inherit-product-if-exists, vendor/xiaomi/ExclusivePack/config.mk)
 
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common Xtended stuff.
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+# Inherit some common RevengeOS stuff.
+$(call inherit-product, vendor/revengeos/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
-PRODUCT_NAME := xtended_daisy
+PRODUCT_NAME := revengeos_daisy
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A2 Lite
@@ -41,7 +41,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.xtended.maintainer=🔥TogoFire🔥    
+    ro.revengeos.maintainer=🔥TogoFire🔥    
+
+IS_PHONE := true
 
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+# Some Extra's
+#REVENGEOS_BUILDTYPE :=
