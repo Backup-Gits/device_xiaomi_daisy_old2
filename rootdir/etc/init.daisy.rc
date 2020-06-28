@@ -75,6 +75,3 @@ on post-fs-data
 # FPS Info
     chown system graphics /sys/class/graphics/fb0/measured_fps
     chmod 0666 /sys/class/graphics/fb0/measured_fps
-
-# DT2W
-    echo 1 > /proc/touchpanel/wakeup_gesture
