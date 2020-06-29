@@ -41,3 +41,7 @@ allow system_server vendor_default_prop:file { read open getattr map };
 allow system_server system_file:dir { write };
 allow system_server init:process { signal };
 allow system_app hal_power_stats_default:binder { call };
+# allow system_server wfd_debug_prop:file { read };
+allow system_server proc:file { getattr };
+allow system_server proc:file { read };
+allow system_server proc:file { open };

@@ -96,3 +96,5 @@ allow system_app sysfs_leds:file { write };
 allow system_app sysfs_leds:file { open };
 allow system_app sysfs_leds:file { getattr };
 allow system_app sysfs_msm_perf:dir { search };
+allow system_app sysfs_kgsl:dir { search };
+allow system_app selinuxfs:file { read };
