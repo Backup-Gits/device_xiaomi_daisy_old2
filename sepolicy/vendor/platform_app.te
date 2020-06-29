@@ -38,8 +38,8 @@ allow platform_app pstorefs:dir { read };
 allow platform_app sysfs_dt_firmware_android:dir { read };
 allow platform_app sysfs_wakeup_reasons:dir { read };
 allow platform_app sysfs_slpi:dir { read };
-allow platform_app spectrum_prop:property_service { set };
-allow platform_app spectrum_prop:file { read open getattr };
+# allow platform_app spectrum_prop:property_service { set };
+# allow platform_app spectrum_prop:file { read open getattr };
 
 # Face Unlock
 get_prop(platform_app, camera_prop)
@@ -52,3 +52,5 @@ allow platform_app sysfs_leds:dir search;
 allow platform_app hal_dms_hwservice:hwservice_manager find;
 allow platform_app hal_dms_default:binder { call transfer };
 allow platform_app sysfs_kgsl:lnk_file read;
+allow platform_app vendor_display_prop:file { getattr };
+allow platform_app system_app_data_file:dir { getattr };
