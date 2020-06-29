@@ -174,7 +174,8 @@ TARGET_PER_MGR_ENABLED := true
 
 # Power
 #TARGET_USES_NON_LEGACY_POWERHAL := true
-TARGET_RPM_SYSTEM_STAT := /d/rpm_stats
+#TARGET_RPM_SYSTEM_STAT := /d/rpm_stats
+TARGET_RPM_SYSTEM_STAT := /d/rpm_master_stats
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/wakeup_gesture"
 #TARGET_USES_INTERACTION_BOOST := true
 
