@@ -196,3 +196,4 @@ allow untrusted_app_27 ctl_dumpstate_prop:file { open };
 allow untrusted_app_27 sysfs_kgsl:dir { search };
 allow untrusted_app_27 system_bootstrap_lib_file:dir { getattr };
 allow untrusted_app_27 sysfs_lowmemorykiller:dir { search };
+allow untrusted_app_27 kcal_dev:dir { read };

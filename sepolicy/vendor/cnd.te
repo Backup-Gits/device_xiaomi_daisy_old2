@@ -4,4 +4,5 @@ allow cnd default_android_hwservice:hwservice_manager { find };
 allow cnd wifi_prop:file { read };
 allow cnd wifi_prop:file { open };
 allow cnd wifi_prop:file { getattr };
+#allow cnd hal_slmadapter_hwservice:hwservice_manager find;
 allow cnd diag_device:chr_file { read write };

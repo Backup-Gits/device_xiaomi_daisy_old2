@@ -13,3 +13,10 @@ set_prop(tee, system_prop)
 allow tee block_device:blk_file { getattr open read write };
 allow tee system_file:file { execute getattr open read };
 allow tee unlabeled:file { read write };
+typeattribute tee data_between_core_and_vendor_violators;
+allow tee vendor_data_file:dir { read };
+allow tee vendor_data_file:dir { open };
+allow tee vendor_data_file:dir { write };
+allow tee vendor_data_file:dir { add_name };
+allow tee vendor_data_file:file { create };
+allow tee vendor_data_file:file { read write open };

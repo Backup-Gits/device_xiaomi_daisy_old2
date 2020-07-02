@@ -6,3 +6,6 @@ allow fsck mnt_vendor_file:dir { search };
 # allow fsck fsck:capability { dac_override };
 # allow fsck fsck:capability { dac_read_search };
 allow fsck fsck:capability { sys_admin };
+allow fsck tmpfs:blk_file { getattr };
+allow fsck cache_block_device:blk_file { getattr read write };
+allow fsck userdata_block_device:blk_file { getattr read write };

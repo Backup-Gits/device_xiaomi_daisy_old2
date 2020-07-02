@@ -139,3 +139,4 @@ allow untrusted_app adbd_exec:file { getattr };
 allow untrusted_app hal_imsrtp:dir { getattr };
 allow untrusted_app vendor_toolbox_exec:file { getattr };
 allow untrusted_app vendor_toolbox_exec:file { read };
+allow untrusted_app app_data_file:file { execute };
