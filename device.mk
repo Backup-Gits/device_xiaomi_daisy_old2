@@ -530,11 +530,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
-# Wave
-PRODUCT_PACKAGES += \
-    MotoWaves \
-    WavesService
-
 # SemcMusic
 PRODUCT_PACKAGES += \
     SemcMusic
