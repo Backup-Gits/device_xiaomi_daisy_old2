@@ -2,17 +2,35 @@
 persist.camera.debug.logfile                                  u:object_r:persist_camera_prop:s0
 camera.dual.mode           u:object_r:camera_prop:s0
 persist.camera.            u:object_r:camera_prop:s0
+hardware.camera.autohdr    u:object_r:camera_prop:s0
+#camera.                             u:object_r:camera_prop:s0
+#persist.vendor.camera.              u:object_r:vendor_camera_prop:s0
 
-# persist.vendor.camera.bokeh.dumpimg    u:object_r:vendor_camera_prop:s0
-# persist.vendor.camera.HAL3.enabled     u:object_r:vendor_camera_prop:s0
-# vendor.debug.camera.prop_picselfie     u:object_r:vendor_camera_prop:s0
-# vendor.debug.camera.prop_bokeh         u:object_r:vendor_camera_prop:s0
-# vendor.debug.camera.prop_hdr           u:object_r:vendor_camera_prop:s0
-# vendor.debug.camera.prop_dis           u:object_r:vendor_camera_prop:s0
+#persist.vendor.camera.bokeh.dumpimg    u:object_r:vendor_camera_prop:s0
+#persist.vendor.camera.HAL3.enabled     u:object_r:vendor_camera_prop:s0
+#vendor.debug.camera.prop_picselfie     u:object_r:vendor_camera_prop:s0
+#vendor.debug.camera.prop_bokeh         u:object_r:vendor_camera_prop:s0
+#vendor.debug.camera.prop_hdr           u:object_r:vendor_camera_prop:s0
+#vendor.debug.camera.prop_dis           u:object_r:vendor_camera_prop:s0
+#persist.camera.HAL3.enabled     		u:object_r:vendor_camera_prop:s0
+
+
+# Aux Camera privapp list and aux camera {black,white}list props readable to everything
+#persist.vendor.camera.privapp.list     u:object_r:exported_default_prop:s0
+#vendor.camera.aux.packageblacklist     u:object_r:exported_default_prop:s0
+#vendor.camera.aux.packagelist          u:object_r:exported_default_prop:s0
+#libsepol.context_from_record			u:object_r:vendor_camera_prop:s0
+
+# HAL1 prop readable to everything
+#vendor.camera.hal1.packagelist         u:object_r:exported_default_prop:s0
+camera.hal1.packagelist         		u:object_r:exported_default_prop:s0
 
 # HAL3
-persist.camera.HAL3.enable                    u:object_r:camera_prop:s0
+persist.camera.HAL3.enable   	               u:object_r:camera_prop:s0
+persist.camera.HAL3.enabled                    u:object_r:camera_prop:s0
 
+# Wifi
+wifi.active.interface      u:object_r:exported_wifi_prop:s0
 
 # Fingerprint
 persist.sys.fp.                                               u:object_r:fingerprint_prop:s0

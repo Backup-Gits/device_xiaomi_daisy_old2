@@ -7,3 +7,6 @@ allow bluetooth vendor_file:file { read };
 allow bluetooth gpuservice:binder { call };
 allow bluetooth theme_prop:file { read open getattr };
 allow bluetooth sysfs_kgsl:dir { search };
+
+# Binder call with gpuservice
+binder_call(bluetooth, gpuservice)
